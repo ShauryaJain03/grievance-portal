@@ -1,18 +1,9 @@
-import FAQpage from "./FAQs";
-
+import FAQpage from "../components/FAQs";
+import "./Home.css"
 export default function Home() {
   return (
     <div>
-      <header className="w-full flex justify-between p-5 font-body text-xl">
-        <div>
-          Student Grievance Redressal Portal
-        </div>
-        <div>Lodge Complaint</div>
-        <div className="flex gap-4">
-          <div>Student Login</div>
-          <div>Admin Login</div>
-        </div>
-      </header>
+      
       <div className="w-full flex">
         <div className="w-1/2 p-4  px-10">
           <div className="font-bold text-xl pt-6">About</div>

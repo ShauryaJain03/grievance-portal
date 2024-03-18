@@ -1,15 +1,25 @@
 import {BrowserRouter, Route, Routes} from "react-router-dom"
+
+// eslint-disable-next-line no-unused-vars
 import Home from "./pages/Home"
-import Login from "./pages/Login"
 import Contact from "./pages/Contact"
+import UserLogin from "./pages/UserLogin"
+import AdminLogin from "./pages/AdminLogin"
+import Layout from "./Layout"
+import Account from "./pages/Account"
 function App() {
 
   return (
     <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Home/>} />
-      <Route path="/login" element={<Login/>} />
-      <Route path="/contact" element={<Contact/>}  />
+      <Route path="/" element={<Layout/>}>
+        <Route index element={<Home/>}/>
+        <Route path="/contact" element={<Contact/>}  />
+      </Route>
+        <Route path="/studentlogin" element={<UserLogin/>} />
+        <Route path="/adminlogin" element={<AdminLogin/>} />
+        <Route path="/account" element={<Account/>} />
+       
     </Routes>
     </BrowserRouter>
   )
