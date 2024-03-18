@@ -49,13 +49,16 @@ function UserLogin() {
       <input type="password" placeholder="Your Password" value={passwd} onChange={(e)=>{setPasswd(e.target.value)}} className="border-2 w-full  px-2 py-1 "/>
       <button className="border-2 rounded-lg bg-blue-400 text-white px-2 py-2 w-full my-4">
 
+      <Link to="/account">
       <div className="flex items-center justify-center gap-1">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
-        <path fillRule="evenodd" d="M12 1.5a5.25 5.25 0 0 0-5.25 5.25v3a3 3 0 0 0-3 3v6.75a3 3 0 0 0 3 3h10.5a3 3 0 0 0 3-3v-6.75a3 3 0 0 0-3-3v-3c0-2.9-2.35-5.25-5.25-5.25Zm3.75 8.25v-3a3.75 3.75 0 1 0-7.5 0v3h7.5Z" clipRule="evenodd" />
-      </svg>
-
-        <p>Login</p>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+          <path fillRule="evenodd" d="M12 1.5a5.25 5.25 0 0 0-5.25 5.25v3a3 3 0 0 0-3 3v6.75a3 3 0 0 0 3 3h10.5a3 3 0 0 0 3-3v-6.75a3 3 0 0 0-3-3v-3c0-2.9-2.35-5.25-5.25-5.25Zm3.75 8.25v-3a3.75 3.75 0 1 0-7.5 0v3h7.5Z" clipRule="evenodd" />
+        </svg>
+          <p>
+            Login
+          </p>
       </div>
+        </Link>
       </button>
       
     </form>

@@ -27,6 +27,12 @@ app.post("/adminlogin",(req,res)=>{
     res.json({email,passwd});
 })
 
+app.post("/newGrievance",(req,res)=>{
+    const {type,desc,image}=req.body;
+    console.log(type,desc);
+    res.json({type,desc});
+})
+
 app.listen(4000,()=>{
     console.log("listening");
 })
