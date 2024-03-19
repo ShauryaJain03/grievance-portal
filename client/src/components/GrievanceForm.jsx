@@ -31,7 +31,7 @@ function GrievanceForm() {
 
 
     return (
-        <div className="mt-8 p-6 shadow-lg shadow-stone-400 rounded-md bg-slate-100 w-3/4">
+        <div className="mt-8 p-6 shadow-lg shadow-stone-400 rounded-md w-3/4 bg-slate-100">
         <h1 className="text-2xl mb-4">Submit Your Grievance</h1>
 
         <form onSubmit={handleSubmit}>
@@ -53,7 +53,7 @@ function GrievanceForm() {
             </div>
 
             <div className="mb-4">
-                <label htmlFor="image" className="block text-gray-700">Upload Related Images</label>
+                <label htmlFor="image" className="block text-gray-700">Upload Related Image(s) if any</label>
                 <input type="file" id="image" name="image" accept="image/*" className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" onChange={handleFileChange}/>
             </div>
 

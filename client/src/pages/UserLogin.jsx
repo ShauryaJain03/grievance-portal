@@ -1,6 +1,7 @@
 import { useState } from "react"
 import axios from "axios";
 import { Link } from "react-router-dom";
+import HeaderNoPic from "./HeaderNoPic";
 function UserLogin() {
   const [email,setEmail]=useState('');
   const [passwd,setPasswd]=useState('');
@@ -17,20 +18,7 @@ function UserLogin() {
 
   return (
     <>
-    <header className="w-full font-body text-xl shadow-md shadow-stone-300  text-black p-6 top-0">
-        <div className="flex justify-between items-center h-1/3 px-12">
-          <Link to="/">
-            <p>
-            IIIT Allahabad
-            </p>
-          </Link>
-          <div className="flex gap-8">
-            <div><Link to='/studentlogin'>Student Login</Link></div>
-            <div><Link to='/adminlogin'>Admin Login</Link></div>
-            <div><Link to='/contact'>Contact</Link></div>
-          </div>
-        </div>
-      </header>
+    <HeaderNoPic/>
     
     <div className="flex items-center justify-center h-svh">
 

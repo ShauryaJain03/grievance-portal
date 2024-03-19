@@ -14,8 +14,8 @@ function App() {
     <Routes>
       <Route path="/" element={<Layout/>}>
         <Route index element={<Home/>}/>
-        <Route path="/contact" element={<Contact/>}  />
       </Route>
+        <Route path="/contact" element={<Contact/>}  />
         <Route path="/studentlogin" element={<UserLogin/>} />
         <Route path="/adminlogin" element={<AdminLogin/>} />
         <Route path="/account" element={<Account/>} />
