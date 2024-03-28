@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 
 import { Avatar, Divider } from "@mui/material"
-import HeaderNoPic from "./HeaderNoPic"
+import HeaderNoPic from "../components/HeaderNoPic"
 
 export function EduComp(props){
   return <div className="flex items-center justify-between py-2 border-2 h-[100px] w-[600px] rounded-lg px-4">

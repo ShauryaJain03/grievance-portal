@@ -1,5 +1,6 @@
 const express=require("express");
 require('dotenv').config();
+const User=require("./models/User")
 const jwt = require('jsonwebtoken');
 const app=express();
 const bcrypt=require("bcryptjs");
@@ -13,12 +14,16 @@ app.use(cors({
     credentials:true
 }))
 
-/* mongoose.connect(process.env.MONGO_URL);
- */
-app.post("/studentlogin",(req,res)=>{
+mongoose.connect(process.env.MONGO_URL);
+
+app.post("/studentlogin",async (req,res)=>{
     const {email,passwd}=req.body;
     console.log(email,passwd);
-    res.json({email,passwd});
+    const newUser=await User.create({
+        email,
+        passwd
+    })
+    res.json(newUser);
 })
 
 app.post("/adminlogin",(req,res)=>{

@@ -7,6 +7,8 @@ import UserLogin from "./pages/UserLogin"
 import AdminLogin from "./pages/AdminLogin"
 import Layout from "./Layout"
 import Account from "./pages/Account"
+import Status from "./pages/Status"
+import Previous from "./pages/PreviousPosts"
 function App() {
 
   return (
@@ -19,7 +21,8 @@ function App() {
         <Route path="/studentlogin" element={<UserLogin/>} />
         <Route path="/adminlogin" element={<AdminLogin/>} />
         <Route path="/account" element={<Account/>} />
-       
+        <Route path="/status" element={<Status/>} />
+        <Route path="/previous" element={<Previous/>} />
     </Routes>
     </BrowserRouter>
   )
