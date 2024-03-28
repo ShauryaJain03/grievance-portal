@@ -1,26 +1,18 @@
 import { Sidebar, Menu, MenuItem } from 'react-pro-sidebar';
 import EventNoteIcon from '@mui/icons-material/EventNote';
-import Radio from '@mui/material/Radio';
-import RadioGroup from '@mui/material/RadioGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import FormControl from '@mui/material/FormControl';
-import FormLabel from '@mui/material/FormLabel';
+
 import DomainVerificationIcon from '@mui/icons-material/DomainVerification';
 import LogoutIcon from '@mui/icons-material/Logout';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
-import { useState } from 'react';
+import StarRating from '../components/StarRating';
 
 function Status() {
-  const [value, setValue] = useState('female');
 
-  const handleChange = (event) => {
-    setValue(event.target.value);
-  };
   return (
     <div>
       <div className='h-dvh'>
         <div className='h-full flex'>
-      <Sidebar backgroundColor="rgb(29, 129, 220,0.4)" width='280px'  className='shadow-xl shadow-stone-400'>
+      <Sidebar backgroundColor="#87CEEB" width='280px'  className='shadow-xl shadow-stone-400'>
         <Menu>
           <div className='text-center my-5 text-xl font-semibold'>
             Grievance Redressal Portal
@@ -38,7 +30,7 @@ function Status() {
       <main className='flex flex-col w-full'>
 
       <div className='flex px-8 py-5 justify-between items-center'>
-        <div>Status</div>
+        <div className='text-2xl'>Status</div>
 
         <div className="flex items-center gap-2 border border-gray-300 rounded-full py-2 px-4 ">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -54,7 +46,7 @@ function Status() {
       </div>
 
       <div className='w-full h-full'>
-        <div className='px-8 flex justify-between w-3/4 py-5 font-semibold'>
+        <div className='px-8 flex justify-between w-3/4 py-5 font-semibold '>
             <div>Case Number : 123</div>
             <p>Name of Complainant : John Doe</p>
         </div>
@@ -67,25 +59,14 @@ function Status() {
             </div>
             <div className='flex justify-between w-3/4'>
                 <div>Email : johndoe@gmail.com</div>
-                <div>Contact : 9000XXXX</div>
+                <div>Contact : 98732XXXXX</div>
             </div>
         </div>
-        <div className='px-8 py-5'>
-        <FormControl>
-        <FormLabel id="demo-row-radio-buttons-group-label" sx={{color:"black",fontSize:16,marginY:2}}>Feedback</FormLabel>
-        <RadioGroup
-          row
-          aria-labelledby="demo-row-radio-buttons-group-label"
-          name="row-radio-buttons-group"
-          value={value}
-          onChange={handleChange}
-        >
-          <FormControlLabel value="female" control={<Radio />} label="Excellent" />
-          <FormControlLabel value="male" control={<Radio />} label="Good" />
-          <FormControlLabel value="other" control={<Radio />} label="Satisfactory" />
-          <FormControlLabel value="haha" control={<Radio />} label="Poor"/>
-        </RadioGroup>
-      </FormControl>  
+        <div className='px-8 py-5 flex items-center gap-4'>
+          <div className='text-lg'>Feedback</div>
+          <div>
+            <StarRating maxRating={5} size={28} color={"#87CEEB "}/>
+          </div>
         </div>
         <div className='px-4 flex justify-center gap-16 py-4 font-semibold w-full text-white'>
             <button className='border border-green-400 px-3 py-2 rounded-xl bg-green-400 hover:bg-green-500'>Satisfied</button>

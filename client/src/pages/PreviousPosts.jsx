@@ -61,7 +61,7 @@ function Previous() {
       <main className='flex flex-col w-full'>
 
       <div className='flex px-8 py-5 justify-between items-center'>
-        <div>Status</div>
+        <div className='text-lg font-semibold'>Previous Posts</div>
 
         <div className="flex items-center gap-2 border border-gray-300 rounded-full py-2 px-4 ">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
