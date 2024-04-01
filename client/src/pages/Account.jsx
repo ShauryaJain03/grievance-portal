@@ -1,31 +1,16 @@
-import { Sidebar, Menu, MenuItem } from 'react-pro-sidebar';
-import EventNoteIcon from '@mui/icons-material/EventNote';
-import DomainVerificationIcon from '@mui/icons-material/DomainVerification';
-import LogoutIcon from '@mui/icons-material/Logout';
-import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import GrievanceForm from '../components/GrievanceForm';
+import SidebarComp from '../components/Sidebar';
 
 
 function Account() {
   return (
     <div className='h-dvh'>
       <div className='h-full flex'>
-      <Sidebar backgroundColor="rgb(29, 129, 220,0.4)" width='280px'  className='shadow-xl shadow-stone-400'>
-        <Menu>
-          <div className='text-center my-5 text-xl font-semibold'>
-            Grievance Redressal Portal
-          </div>
-          <br/>
-          <MenuItem> <EventNoteIcon/> Post Grievance</MenuItem>
-          <MenuItem> <DomainVerificationIcon/> View Status</MenuItem>
-          <MenuItem><ContentCopyIcon/>  Previous Posts</MenuItem>
-          <MenuItem> <LogoutIcon/> Logout</MenuItem>
-        </Menu>
-      </Sidebar>
+        <SidebarComp/>
       <main className='flex flex-col w-full'>
 
       <div className='flex px-8 py-5 justify-between items-center'>
-        <div>Status</div>
+      <div className='text-2xl'>Status</div>
 
         <div className="flex items-center gap-2 border border-gray-300 rounded-full py-2 px-4 ">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">

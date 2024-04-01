@@ -19,7 +19,7 @@ function Header() {
           <div className="text-4xl">Grievance Redressal Portal</div>
           <div>
             <button className="px-3 py-1 border bg-blue-400 rounded-lg">Lodge complaint</button>
-          </div>
+          </div>  
         </div>
       </header>
     </div>

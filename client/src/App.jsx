@@ -9,20 +9,23 @@ import Layout from "./Layout"
 import Account from "./pages/Account"
 import Status from "./pages/Status"
 import Previous from "./pages/PreviousPosts"
+import AdminDashboard from "./pages/AdminDashboard"
 function App() {
 
   return (
     <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Layout/>}>
-        <Route index element={<Home/>}/>
-      </Route>
+        <Route path="/" element={<Layout/>}>
+          <Route index element={<Home/>}/>
+        </Route>
         <Route path="/contact" element={<Contact/>}  />
         <Route path="/studentlogin" element={<UserLogin/>} />
         <Route path="/adminlogin" element={<AdminLogin/>} />
         <Route path="/account" element={<Account/>} />
-        <Route path="/status" element={<Status/>} />
-        <Route path="/previous" element={<Previous/>} />
+        <Route path="/account/status" element={<Status/>} />
+        <Route path="/account/previous" element={<Previous/>} />
+        <Route path="/admin" element={<AdminDashboard/>} />
+        
     </Routes>
     </BrowserRouter>
   )

@@ -1,10 +1,6 @@
-import { Sidebar, Menu, MenuItem } from 'react-pro-sidebar';
-import EventNoteIcon from '@mui/icons-material/EventNote';
-
-import DomainVerificationIcon from '@mui/icons-material/DomainVerification';
-import LogoutIcon from '@mui/icons-material/Logout';
-import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import StarRating from '../components/StarRating';
+import { Divider } from '@mui/material';
+import SidebarComp from '../components/Sidebar';
 
 function Status() {
 
@@ -12,21 +8,7 @@ function Status() {
     <div>
       <div className='h-dvh'>
         <div className='h-full flex'>
-      <Sidebar backgroundColor="#87CEEB" width='280px'  className='shadow-xl shadow-stone-400'>
-        <Menu>
-          <div className='text-center my-5 text-xl font-semibold'>
-            Grievance Redressal Portal
-          </div>
-          <br/>
-            <MenuItem><EventNoteIcon/> Post Grievance</MenuItem>
-          
-            <MenuItem><DomainVerificationIcon/> View Status</MenuItem>
-          
-            <MenuItem><ContentCopyIcon/>  Previous Posts</MenuItem>
-         
-            <MenuItem> <LogoutIcon/> Logout</MenuItem>
-        </Menu>
-      </Sidebar>
+          <SidebarComp/>
       <main className='flex flex-col w-full'>
 
       <div className='flex px-8 py-5 justify-between items-center'>
@@ -44,33 +26,60 @@ function Status() {
           </div>
         </div>
       </div>
-
+      <Divider/>
       <div className='w-full h-full'>
-        <div className='px-8 flex justify-between w-3/4 py-5 font-semibold '>
-            <div>Case Number : 123</div>
-            <p>Name of Complainant : John Doe</p>
+        <div className='px-8 flex justify-between w-3/4 py-5'>
+            <div className='flex gap-2'>
+              <div className='font-semibold'>Case Number : </div>
+              <div>123</div>
+            </div>
+            <div className='flex gap-2'>
+              <div className='font-semibold'>Name of Complainant : </div>
+              <div>John Doe</div>
+            </div>
+            
         </div>
+        <Divider/>
         <div className='w-full px-8 py-5 flex flex-col gap-8'>
-            <div>Current Status : Pending</div>
-            <div>Final Decision : Pending</div>
-            <div className='flex justify-between w-3/4'>
-                <div>Action Taken By : Dr. Amarnath</div>
-                <div>Designation : Chief Warden</div>
+            <div className='flex gap-2'>
+              <div className='font-semibold'>Current Status : </div>
+              <div className={`text-green-400`}>Resolved</div>
+            </div>
+            <div className='flex gap-2'>
+              <div className='font-semibold'>Final Decision : </div>
+              <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, aperiam Lorem ipsum dolor sit.</div>
             </div>
             <div className='flex justify-between w-3/4'>
-                <div>Email : johndoe@gmail.com</div>
-                <div>Contact : 98732XXXXX</div>
+                <div className='flex gap-2'>
+                  <div className='font-semibold'>Action Taken By : </div>
+                  <div>Dr. Amarnath</div>
+                </div>
+                <div className='flex gap-2'>
+                  <div className='font-semibold'>Designation : </div>
+                  <div>Chief Warden</div>
+                </div>
+            </div>
+            <div className='flex justify-between w-3/4'>
+                <div className='flex gap-2'>
+                  <div className='font-semibold'>Email : </div>
+                  <div>amarnath@iiita.ac.in</div>
+                </div>
+                <div className='flex gap-2'>
+                  <div className='font-semibold'>Contact : </div>
+                  <div>98732XXXXX</div>
+                </div>
             </div>
         </div>
+        <Divider/>
         <div className='px-8 py-5 flex items-center gap-4'>
           <div className='text-lg'>Feedback</div>
           <div>
             <StarRating maxRating={5} size={28} color={"#87CEEB "}/>
           </div>
-        </div>
         <div className='px-4 flex justify-center gap-16 py-4 font-semibold w-full text-white'>
             <button className='border border-green-400 px-3 py-2 rounded-xl bg-green-400 hover:bg-green-500'>Satisfied</button>
             <button className='border border-red-400 px-3 py-2 rounded-xl bg-red-400 hover:bg-red-500'>Escalate</button>
+        </div>
         </div>
       </div>
       </main>

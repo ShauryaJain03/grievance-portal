@@ -1,12 +1,8 @@
 /* eslint-disable react/prop-types */
-import { Sidebar, Menu, MenuItem } from 'react-pro-sidebar';
-import EventNoteIcon from '@mui/icons-material/EventNote';
-import DomainVerificationIcon from '@mui/icons-material/DomainVerification';
-import LogoutIcon from '@mui/icons-material/Logout';
-import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import { Avatar, Divider } from '@mui/material';
+import SidebarComp from '../components/Sidebar';
 
-function EduComp(props){
+function PrevComp(props){
     return (
         <div className=' w-[800px] border-2 rounded-lg py-2 px-4'>
             <div className="flex items-center justify-between py-2 font-semibold">
@@ -42,21 +38,7 @@ function Previous() {
     <div>
       <div className='h-dvh'>
         <div className='h-full flex'>
-      <Sidebar backgroundColor="rgb(29, 129, 220,0.4)" width='280px' className='shadow-xl shadow-stone-400'>
-        <Menu>
-          <div className='text-center my-5 text-xl font-semibold'>
-            Grievance Redressal Portal
-          </div>
-          <br/>
-            <MenuItem><EventNoteIcon/> Post Grievance</MenuItem>
-          
-            <MenuItem><DomainVerificationIcon/> View Status</MenuItem>
-          
-            <MenuItem><ContentCopyIcon/>  Previous Posts</MenuItem>
-         
-            <MenuItem> <LogoutIcon/> Logout</MenuItem>
-        </Menu>
-      </Sidebar>
+          <SidebarComp/>
 
       <main className='flex flex-col w-full'>
 
@@ -78,9 +60,9 @@ function Previous() {
 
       <div className='w-full h-full flex flex-col items-center justify-center gap-8'>
 
-        <EduComp img={''} title={"lorem epsum dolor it su"} postby={"John Doe"} desc={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, porro facere ipsa voluptates asperiores consequatur veniam commodi inventore nisi ducimus tenetur ut cupiditate, laboriosam, autem fugit molestias nemo magni quibusdam?"} status={"Resolved"}/>
+        <PrevComp img={''} title={"lorem epsum dolor it su"} postby={"John Doe"} desc={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, porro facere ipsa voluptates asperiores consequatur veniam commodi inventore nisi ducimus tenetur ut cupiditate, laboriosam, autem fugit molestias nemo magni quibusdam?"} status={"Resolved"}/>
 
-        <EduComp img={''} title={"lorem epsum dolor it su"} postby={"John Doe"} desc={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, porro facere ipsa voluptates asperiores consequatur veniam commodi inventore nisi ducimus tenetur ut cupiditate, laboriosam, autem fugit molestias nemo magni quibusdam?"} status={"Unresolved"}/>
+        <PrevComp img={''} title={"lorem epsum dolor it su"} postby={"John Doe"} desc={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, porro facere ipsa voluptates asperiores consequatur veniam commodi inventore nisi ducimus tenetur ut cupiditate, laboriosam, autem fugit molestias nemo magni quibusdam?"} status={"Unresolved"}/>
       </div>
       </main>
       </div>
