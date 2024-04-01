@@ -23,28 +23,28 @@ function AdminDashboard() {
                 </Menu>
             </Sidebar> 
       <main className='flex flex-col w-full'>
-        <div className='border-2 py-4 px-4'>
-            <div className='text-lg font-semibold py-2'>DASHBOARD</div>
+        <div className='py-4 px-4'>
+            <div className='text-lg font-semibold py-6'>DASHBOARD</div>
             <div className='flex py-2 gap-3 text-white'>
-              <div className="border-2 p-4 w-[24%] rounded-xl bg-orange-500">
+              <div className="p-4 w-[24%] rounded-xl bg-orange-500">
                 <div>Number</div>
                 <div>New Grievances</div>
               </div>    
-              <div className="border-2 p-4 w-[24%] rounded-xl bg-blue-500">
+              <div className="p-4 w-[24%] rounded-xl bg-blue-500">
                 <div>Number</div>
                 <div>New Grievances</div>
               </div>    
-              <div className="border-2 p-4 w-[24%] rounded-xl bg-green-500">
+              <div className="p-4 w-[24%] rounded-xl bg-green-500">
                 <div>Number</div>
                 <div>New Grievances</div>
               </div>    
-              <div className="border-2 p-4 w-[24%] rounded-xl bg-red-500">
+              <div className="p-4 w-[24%] rounded-xl bg-red-500">
                 <div>Number</div>
                 <div>New Grievances</div>
               </div>    
             </div>
         </div>
-        <div className=''>
+        <div className='h-full'>
             <BarCharts/>
         </div>        
       </main>

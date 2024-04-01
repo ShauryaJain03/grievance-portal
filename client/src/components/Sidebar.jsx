@@ -15,8 +15,7 @@ function SidebarComp() {
           </div>
           <br/>
           <Link to="/account"><MenuItem> <EventNoteIcon/> Post Grievance</MenuItem></Link>
-          <Link to="/account/status"><MenuItem> <DomainVerificationIcon/> 
-           View Status
+          <Link to="/account/status"><MenuItem> <DomainVerificationIcon/> View Status
           </MenuItem></Link>
           <Link to="/account/previous"><MenuItem><ContentCopyIcon/>  Previous Posts</MenuItem></Link>
           <MenuItem> <LogoutIcon/> Logout</MenuItem>

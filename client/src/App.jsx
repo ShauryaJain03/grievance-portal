@@ -10,6 +10,7 @@ import Account from "./pages/Account"
 import Status from "./pages/Status"
 import Previous from "./pages/PreviousPosts"
 import AdminDashboard from "./pages/AdminDashboard"
+import AdminGrievance from "./pages/AdminGrievance"
 function App() {
 
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/account/status" element={<Status/>} />
         <Route path="/account/previous" element={<Previous/>} />
         <Route path="/admin" element={<AdminDashboard/>} />
+        <Route path="/admin/grievance" element={<AdminGrievance/>} />
         
     </Routes>
     </BrowserRouter>
