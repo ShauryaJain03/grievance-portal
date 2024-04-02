@@ -16,11 +16,10 @@ function AdminDashboard() {
                     Grievance Redressal Portal
                 </div>
                 <br/>
-                <Link to="/account"><MenuItem> <EventNoteIcon/> New Grievances</MenuItem></Link>
-                <Link to="/account/status"><MenuItem> <DomainVerificationIcon/> Resolved
-                </MenuItem></Link>
-                <MenuItem> <LogoutIcon/> Logout</MenuItem>
-                </Menu>
+                <Link to="/admin/"><MenuItem> <DomainVerificationIcon/> Dashboard</MenuItem></Link>
+              <Link to="/admin/grievance"><MenuItem> <EventNoteIcon/> New Grievances</MenuItem></Link>
+              <MenuItem> <LogoutIcon/> Logout</MenuItem>
+              </Menu>
             </Sidebar> 
       <main className='flex flex-col w-full'>
         <div className='py-4 px-4'>

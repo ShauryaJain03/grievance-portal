@@ -3,31 +3,31 @@ import { PieChart, Pie } from 'recharts';
 const data = [
   {
     name: 'Jan',
-    amt: 2400,
+    amt: 24,
   },
   {
     name: 'Feb',
-    amt: 2210,
+    amt: 22,
   },
   {
     name: 'March',
-    amt: 2290,
+    amt: 29,
   },
   {
     name: 'April',
-    amt: 2000,
+    amt: 20,
   },
   {
     name: 'May',
-    amt: 2181,
+    amt: 21,
   },
   {
     name: 'June',
-    amt: 2500,
+    amt: 7,
   },
   {
     name: 'July',
-    amt: 2100,
+    amt: 11,
   }
 ];
 
