@@ -14,21 +14,26 @@ function PrevComp(props){
     console.log(dec);
     return (
         <div className=' w-[800px] border-2 rounded-lg py-2 px-4'>
-            <div className="flex items-center justify-between py-2 font-semibold">
+            <div className="flex items-center justify-between py-2">
                 <div className="flex items-center justify-center gap-3">
                     <div>
                         <Avatar src= {`${props.img}`} />
                     </div>
-                    <div>
+                    <div className='font-semibold'>
                         {props.title}
                     </div>
-                    <Divider orientation="vertical" flexItem />
+                    <Divider orientation="vertical" flexItem/>
                     <div className='flex gap-2'>
-                        Posted By : <div>{props.postby}</div>
+                        <div className='font-semibold'>Posted By : </div>
+                        <div className='text-blue-500 font-semibold'>{props.postby}</div>
                     </div>
                 </div>
+                <div>
+                    <div className='text-red-500 font-semibold'>{props.escalated}</div>
+                </div>
                 <div className="flex gap-2">
-                        Posted On : <div className={props.status==="Resolved"?"text-green-400":"text-red-400"}>{props.date}</div>
+                    <div className='font-semibold'>Posted On :</div>
+                     <div className='text-blue-500 font-semibold'>{props.date}</div>
                 </div>
             </div>
 
@@ -73,9 +78,9 @@ function AdminGrievance() {
               </Menu>
           </Sidebar> 
     <main className='flex flex-col w-full'>
-      <div className='text-xl py-4 px-4 font-semibold'>New Grievances</div>
+      <div className='text-xl py-6  px-6 font-semibold'>NEW GRIEVANCES</div>
       <div className='py-4 px-4 flex flex-col gap-5 justify-center items-center'>
-      <PrevComp img={''} title={"lorem epsum dolor it su"} postby={"John Doe"} desc={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, porro facere ipsa voluptates asperiores consequatur veniam commodi inventore nisi ducimus tenetur ut cupiditate, laboriosam, autem fugit molestias nemo magni quibusdam?"} date={"Jan 12, 2024"}/>
+      <PrevComp img={''} title={"lorem epsum dolor it su"} postby={"John Doe"} desc={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, porro facere ipsa voluptates asperiores consequatur veniam commodi inventore nisi ducimus tenetur ut cupiditate, laboriosam, autem fugit molestias nemo magni quibusdam?"} date={"Jan 12, 2024"} escalated={"Escalated"}/>
       <PrevComp img={''} title={"lorem epsum dolor it su"} postby={"John Doe"} desc={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, porro facere ipsa voluptates asperiores consequatur veniam commodi inventore nisi ducimus tenetur ut cupiditate, laboriosam, autem fugit molestias nemo magni quibusdam?"} date={"Jan 12, 2024"}/>
       <PrevComp img={''} title={"lorem epsum dolor it su"} postby={"John Doe"} desc={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, porro facere ipsa voluptates asperiores consequatur veniam commodi inventore nisi ducimus tenetur ut cupiditate, laboriosam, autem fugit molestias nemo magni quibusdam?"} date={"Jan 12, 2024"}/>
       </div>

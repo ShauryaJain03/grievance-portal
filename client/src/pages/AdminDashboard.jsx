@@ -9,8 +9,8 @@ function AdminDashboard() {
   return (
     <div>
       <div className='h-dvh'>
-        <div className='h-full flex'>
-            <Sidebar backgroundColor="#87CEEB" width='280px'  className='shadow-xl shadow-stone-400 h-full'>
+        <div className='h-full flex '>
+            <Sidebar backgroundColor="#87CEEB" width='280px'  className='shadow-xl shadow-stone-400 '>
                 <Menu>
                 <div className='text-center my-5 text-xl font-semibold'>
                     Grievance Redressal Portal
@@ -26,20 +26,20 @@ function AdminDashboard() {
             <div className='text-lg font-semibold py-6'>DASHBOARD</div>
             <div className='flex py-2 gap-3 text-white'>
               <div className="p-4 w-[24%] rounded-xl bg-orange-500">
-                <div>Number</div>
-                <div>New Grievances</div>
+                <div className='text-xl font-semibold'>18</div>
+                <div>Pending Grievances</div>
               </div>    
               <div className="p-4 w-[24%] rounded-xl bg-blue-500">
-                <div>Number</div>
-                <div>New Grievances</div>
+                <div className='text-xl font-semibold'>40</div>
+                <div>Resolved Grievances</div>
               </div>    
               <div className="p-4 w-[24%] rounded-xl bg-green-500">
-                <div>Number</div>
-                <div>New Grievances</div>
+                <div className='text-xl font-semibold'>3 days</div>
+                <div>Average Resolution Time</div>
               </div>    
               <div className="p-4 w-[24%] rounded-xl bg-red-500">
-                <div>Number</div>
-                <div>New Grievances</div>
+                <div className='text-xl font-semibold'>6</div>
+                <div>Active Staff</div>
               </div>    
             </div>
         </div>
