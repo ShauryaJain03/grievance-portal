@@ -1,20 +1,17 @@
+require('dotenv').config()
 const express=require("express");
-require('dotenv').config();
-const User=require("./models/User")
-const jwt = require('jsonwebtoken');
-const app=express();
-const bcrypt=require("bcryptjs");
 const cors=require("cors");
 const mongoose=require("mongoose");
 
-app.use(express.json());
+const app=express();
+
+mongoose.connect(process.env.MONGO_URL);
 
 app.use(cors({
     origin:"http://localhost:5173",
     credentials:true
 }))
 
-mongoose.connect(process.env.MONGO_URL);
 
 app.post("/studentlogin",async (req,res)=>{
     const {email,passwd}=req.body;
@@ -38,6 +35,6 @@ app.post("/newGrievance",(req,res)=>{
     res.json({type,desc});
 })
 
-app.listen(4000,()=>{
-    console.log("listening");
+app.listen(8000,()=>{
+    console.log("listening on 8000");
 })
