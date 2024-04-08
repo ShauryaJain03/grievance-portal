@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 import { Sidebar, Menu, MenuItem } from 'react-pro-sidebar';
 import EventNoteIcon from '@mui/icons-material/EventNote';
-
 import DomainVerificationIcon from '@mui/icons-material/DomainVerification';
 import LogoutIcon from '@mui/icons-material/Logout';
 import { Link } from 'react-router-dom';
@@ -52,7 +51,7 @@ function PrevComp(props){
                 <TextField id="outlined-basic" label="Final Decision" multiline fullWidth variant="standard" value={dec} onChange={(e)=>{setDec(e.target.value)}}/>
             </div>
             </div>
-            <div className='pt-8 flex items-center justify-center gap-6'>
+            <div className='pt-8 pb-4 flex items-center justify-center gap-6'>
                 <button className='border-2 px-2 py-2 rounded-lg bg-green-500 hover:bg-green-600 text-white'>Set as Resolved</button>
                 <button className='border-2 px-2 py-2 rounded-lg bg-yellow-500 hover:bg-yellow-600 text-white'>Set as In Progress</button>
                 <button className='border-2 px-2 py-2 rounded-lg bg-red-500 hover:bg-red-600 text-white'>Set as Unresolved</button>
@@ -79,10 +78,10 @@ function AdminGrievance() {
           </Sidebar> 
     <main className='flex flex-col w-full'>
       <div className='text-xl py-6  px-6 font-semibold'>NEW GRIEVANCES</div>
-      <div className='py-4 px-4 flex flex-col gap-5 justify-center items-center'>
-      <PrevComp img={''} title={"lorem epsum dolor it su"} postby={"John Doe"} desc={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, porro facere ipsa voluptates asperiores consequatur veniam commodi inventore nisi ducimus tenetur ut cupiditate, laboriosam, autem fugit molestias nemo magni quibusdam?"} date={"Jan 12, 2024"} escalated={"Escalated"}/>
-      <PrevComp img={''} title={"lorem epsum dolor it su"} postby={"John Doe"} desc={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, porro facere ipsa voluptates asperiores consequatur veniam commodi inventore nisi ducimus tenetur ut cupiditate, laboriosam, autem fugit molestias nemo magni quibusdam?"} date={"Jan 12, 2024"}/>
-      <PrevComp img={''} title={"lorem epsum dolor it su"} postby={"John Doe"} desc={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, porro facere ipsa voluptates asperiores consequatur veniam commodi inventore nisi ducimus tenetur ut cupiditate, laboriosam, autem fugit molestias nemo magni quibusdam?"} date={"Jan 12, 2024"}/>
+      <div className='py-4 px-4 flex flex-col gap-12 justify-center items-center'>
+      <PrevComp img={''} title={"Academics stressful"} postby={"John Doe"} desc={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, porro facere ipsa voluptates asperiores consequatur veniam commodi inventore nisi ducimus tenetur ut cupiditate, laboriosam, autem fugit molestias nemo magni quibusdam?"} date={"Jan 12, 2024"} escalated={"Escalated"}/>
+      <PrevComp img={''} title={"Hostel bathrooms not clean"} postby={"John Doe"} desc={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, porro facere ipsa voluptates asperiores consequatur veniam commodi inventore nisi ducimus tenetur ut cupiditate, laboriosam, autem fugit molestias nemo magni quibusdam?"} date={"Jan 12, 2024"}/>
+      <PrevComp img={''} title={"Mess Food"} postby={"John Doe"} desc={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, porro facere ipsa voluptates asperiores consequatur veniam commodi inventore nisi ducimus tenetur ut cupiditate, laboriosam, autem fugit molestias nemo magni quibusdam?"} date={"Jan 12, 2024"}/>
       </div>
     </main>
     </div>

@@ -10,8 +10,7 @@ function HeaderNoPic() {
             </p>
           </Link>
           <div className="flex gap-8">
-            <div><Link to='/studentlogin'>Student Login</Link></div>
-            <div><Link to='/adminlogin'>Admin Login</Link></div>
+            <div><Link to='/login'>Login</Link></div>
             <div><Link to='/contact'>Contact</Link></div>
           </div>
         </div>

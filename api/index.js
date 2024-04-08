@@ -2,39 +2,34 @@ require('dotenv').config()
 const express=require("express");
 const cors=require("cors");
 const mongoose=require("mongoose");
-
+const grievanceRoute=require("./routes/grievance")
 const app=express();
+app.use(express.json());
 
-mongoose.connect(process.env.MONGO_URL);
+
+async function db(){
+    const connection=await mongoose.connect(process.env.MONGO_URL);
+    console.log(connection.connection.port);
+}
+
+try{
+    db();
+}catch(err){
+    console.log(err);
+}
 
 app.use(cors({
     origin:"http://localhost:5173",
     credentials:true
 }))
 
-
-app.post("/studentlogin",async (req,res)=>{
-    const {email,passwd}=req.body;
-    console.log(email,passwd);
-    const newUser=await User.create({
-        email,
-        passwd
-    })
-    res.json(newUser);
+app.get("/",(req,res)=>{
+    res.send("ye lo server bc");
 })
 
-app.post("/adminlogin",(req,res)=>{
-    const {email,passwd}=req.body;
-    console.log(email,passwd);
-    res.json({email,passwd});
-})
-
-app.post("/newGrievance",(req,res)=>{
-    const {type,desc,image}=req.body;
-    console.log(type,desc);
-    res.json({type,desc});
-})
+app.use("/api/grievance",grievanceRoute);
 
 app.listen(8000,()=>{
     console.log("listening on 8000");
 })
+
