@@ -3,6 +3,7 @@ const express=require("express");
 const cors=require("cors");
 const mongoose=require("mongoose");
 const grievanceRoute=require("./routes/grievance")
+const userRoute=require("./routes/users")
 const app=express();
 app.use(express.json());
 
@@ -28,6 +29,7 @@ app.get("/",(req,res)=>{
 })
 
 app.use("/api/grievance",grievanceRoute);
+app.use("/api/user",userRoute);
 
 app.listen(8000,()=>{
     console.log("listening on 8000");
